@@ -1,0 +1,16 @@
+{
+	"name": "typo3/base-package-community-test",
+	"description": "Base package for the generation of a TYPO3 Sitepackage based on typo3/cms-fluid-styled-content at https://get.typo3.org.",
+	"license": "GPL-2.0-or-later",
+	"type": "typo3-base-package",
+	"extra": {
+		"typo3/base-package": {
+			"title": "Community Test Package",
+			"description": "Create a Sitepackage based on the Community Test Package.",
+			"core-versions": [
+				"8.7",
+				"11.5"
+			]
+		}
+	}
+}

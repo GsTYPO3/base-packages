@@ -1,0 +1,23 @@
+name: 🌟 Update a Base Package
+description: Update an existing Base Package that has been previously submitted.
+title: "Update Base Package <replace_by_package_name>"
+labels: [base-package-update]
+assignees:
+  - gilbertsoft
+body:
+  - type: checkboxes
+    id: coc
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow the [TYPO3 Code of Conduct](https://typo3.org/coc).
+      options:
+        - label: I agree to follow the TYPO3 Code of Conduct
+          required: true
+  - type: input
+    id: package-name
+    attributes:
+      label: Composer Package Name
+      description: What is the Composer package name of the Base Package to update?
+      placeholder: 'Example: my-vendor/my-base-package'
+    validations:
+      required: true
