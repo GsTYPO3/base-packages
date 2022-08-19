@@ -18,6 +18,14 @@ The following base packages are currently available:
 | [Fluid Styled Content](https://get.typo3.dev/wizards/sitepackage/validate/typo3/base-package-fluid-styled-content) | For a Sitepackage based on the Fluid Styled Content Extension | ✅ | ✅ |
 | [Introduction Package](https://get.typo3.dev/wizards/sitepackage/validate/typo3/base-package-introduction-package) | For a Sitepackage based on the Official TYPO3 Introduction Package | ✅ | ❌ |
 
+### Rules to get listed
+
+* A base package must offer added value for the community.
+* A support contact must be provided.
+* A web optimized preview image with the size 460x720 pixels and a maximum size
+  of 100 kb must be included.
+* ....
+
 ## Creating Base Packages
 
 TYPO3 Sitepackage Builder Base Packages are Composer packages of type
