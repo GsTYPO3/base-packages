@@ -1,0 +1,16 @@
+{
+	"name": "typo3/introduction-package",
+	"description": "TYPO3 Base Package for the generation of a TYPO3 Sitepackage based on typo3/cms-introduction.",
+	"license": "GPL-2.0-or-later",
+	"type": "typo3-base-package",
+	"extra": {
+		"typo3/base-package": {
+			"title": "Introduction Package",
+			"description": "Create a Sitepackage based on the Official TYPO3 Introduction Package.",
+			"core-versions": [
+				"10.4",
+				"11.5"
+			]
+		}
+	}
+}

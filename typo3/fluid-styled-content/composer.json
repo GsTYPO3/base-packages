@@ -1,0 +1,37 @@
+{
+	"name": "typo3/fluid-styled-content",
+	"description": "TYPO3 Base Package for the generation of a TYPO3 Sitepackage based on typo3/cms-fluid-styled-content.",
+	"license": "GPL-2.0-or-later",
+	"type": "typo3-base-package",
+	"authors": [
+		{
+			"name": "Benjamin Kott",
+			"email": "benjamin.kott@typo3.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Simon Gilli",
+			"email": "simon.gilli@typo3.org",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://typo3.org/",
+	"support": {
+		"issues": "https://github.com/TYPO3/base-packages/issues",
+		"chat": "https://typo3.org/help",
+		"source": "https://github.com/TYPO3/base-packages",
+		"docs": "https://docs.typo3.org"
+	},
+	"extra": {
+		"typo3/base-package": {
+			"title": "Fluid Styled Content",
+			"description": "Create a Sitepackage based on the Fluid Styled Content Extension.",
+			"core-versions": [
+				"8.7",
+				"9.5",
+				"10.4",
+				"11.5"
+			]
+		}
+	}
+}

@@ -1,0 +1,13 @@
+/.build export-ignore
+/.github export-ignore
+/.template export-ignore
+/.editorconfig export-ignore
+
+# Enforce checkout with linux lf consistent over all platforms
+.editorconfig text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.htaccess text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.twig text eol=lf
