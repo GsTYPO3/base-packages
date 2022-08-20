@@ -1,5 +1,6 @@
-name: 🚀 Submit a Base Package
-description: Submit a new Base Package to get integrated into the Sitepackage Builder.
+name: 🆕 Submit a Base Package
+description: Submit a new Base Package for the usage with the TYPO3 Sitepackage Builder.
+title: "Submit a new Base Package"
 labels: [base-package-submission]
 assignees:
   - gilbertsoft

@@ -1,6 +1,7 @@
-name: 🚀 Update a Base Package
+name: 🌟 Update a Base Package
 description: Update an existing Base Package that has been previously submitted.
-labels: [base-package-submission]
+title: "Update an existing Base Package"
+labels: [base-package-update]
 assignees:
   - gilbertsoft
 body:
