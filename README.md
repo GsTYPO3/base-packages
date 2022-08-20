@@ -52,7 +52,7 @@ extra section is used to additionally describe the base package e.g. with the
 supported TYPO3 core versions.
 
 To [create a new Base Package](https://github.com/GsTYPO3/base-package-skeleton/generate)
-use the template repository.
+use the template repository <https://github.com/GsTYPO3/base-package-skeleton>.
 
 The following example shows the directory structure of a base package:
 
@@ -72,9 +72,8 @@ The following example shows the directory structure of a base package:
 
 ### The Manifest (`composer.json`)
 
-The `composer.json` contains the edge information about the Base Package.
-
-Here is a description of the known keys in `extra.typo3/base-package`.
+The `composer.json` contains the edge information about the Base Package. The
+following keys are supported in `extra.typo3/base-package`.
 
 #### The `title` property
 
