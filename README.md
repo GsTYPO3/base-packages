@@ -18,12 +18,30 @@ The following base packages are currently available:
 | [Fluid Styled Content](https://get.typo3.dev/wizards/sitepackage/validate/typo3/base-package-fluid-styled-content) | For a Sitepackage based on the Fluid Styled Content Extension | ✅ | ✅ |
 | [Introduction Package](https://get.typo3.dev/wizards/sitepackage/validate/typo3/base-package-introduction-package) | For a Sitepackage based on the Official TYPO3 Introduction Package | ✅ | ❌ |
 
-### Rules to get listed
+### Rules to add a new base package
 
-* A base package must offer added value for the community.
-* A support contact must be provided.
-* A web optimized preview image with the size 460x720 pixels and a maximum size
-  of 100 kb must be included.
+In order for a pull request from a new base package to be accepted, it must meet
+some conditions. A base package:
+
+* must offer added value for the community.
+* must not contradict the best practices recommended by the TYPO3 Core Team.
+* must follow the TYPO3 Coding Standards.
+* must include a web optimized preview image with the size 460x720 pixels
+  (width x height) and a maximum file size of 100 kilobytes. PNG is the
+  preferred file format.
+* must include a support contact in the `composer.json`, which can be assigned
+  to new issues.
+* ....
+
+### Rules to get listed at get.typo3.org
+
+During the creation of a pull request, an option can be selected to additionally
+get listed at <https://get.typo3.org>. A group of people from various TYPO3 teams
+will make the final decision, if a base package gets listed or not. And some
+additional rules apply, namely a base package:
+
+* must support all TYPO3 LTS releases.
+* must be updated after the x.1.0 and before the x.2.0 minor TYPO3 Core releases.
 * ....
 
 ## Creating Base Packages
@@ -75,31 +93,8 @@ The following example shows the directory structure of some base packages:
 The `composer.json` contains the edge information about the base package and
 must be of type `typo3-base-package`.
 
-Example `composer.json`:
-
-```json
-{
-    "name": "typo3/base-package-bootstrap-package",
-    "description": "Base package for the generation of a TYPO3 Sitepackage based on bk2k/bootstrap-package at https://get.typo3.org.",
-    "license": "GPL-2.0-or-later",
-    "type": "typo3-base-package",
-    "extra": {
-        "typo3/base-package": {
-            "title": "Bootstrap Package",
-            "description": "Create a Sitepackage based on the popular Bootstrap Package.",
-            "core-versions": [
-                "8.7",
-                "9.5",
-                "10.4",
-                "11.5"
-            ],
-            "images": {
-                "preview": "images/preview.png"
-            }
-        }
-    }
-}
-```
+An example `composer.json` can be found in the [template](.template/composer.json).
+Here is a description of the various keys in `extra.typo3/base-package`.
 
 #### The `title` property
 
