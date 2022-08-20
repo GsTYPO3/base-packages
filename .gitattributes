@@ -1,5 +1,6 @@
 /.github export-ignore
 /.template export-ignore
+/.editorconfig export-ignore
 
 # Enforce checkout with linux lf consistent over all platforms
 .editorconfig text eol=lf
