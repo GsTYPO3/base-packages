@@ -1,6 +1,6 @@
 {
-	"name": "typo3/base-package-introduction-package",
-	"description": "Base package for the generation of a TYPO3 Sitepackage based on typo3/cms-introduction at https://get.typo3.org.",
+	"name": "typo3/introduction-package",
+	"description": "TYPO3 Base Package for the generation of a TYPO3 Sitepackage based on typo3/cms-introduction.",
 	"license": "GPL-2.0-or-later",
 	"type": "typo3-base-package",
 	"extra": {

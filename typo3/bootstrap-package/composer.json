@@ -1,8 +1,27 @@
 {
-	"name": "typo3/base-package-bootstrap-package",
-	"description": "Base package for the generation of a TYPO3 Sitepackage based on bk2k/bootstrap-package at https://get.typo3.org.",
+	"name": "typo3/bootstrap-package",
+	"description": "TYPO3 Base Package for the generation of a TYPO3 Sitepackage based on bk2k/bootstrap-package.",
 	"license": "GPL-2.0-or-later",
 	"type": "typo3-base-package",
+	"authors": [
+		{
+			"name": "Benjamin Kott",
+			"email": "benjamin.kott@typo3.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Simon Gilli",
+			"email": "simon.gilli@typo3.org",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://typo3.org/",
+	"support": {
+		"issues": "https://github.com/TYPO3/base-packages/issues",
+		"chat": "https://typo3.org/help",
+		"source": "https://github.com/TYPO3/base-packages",
+		"docs": "https://docs.typo3.org"
+	},
 	"extra": {
 		"typo3/base-package": {
 			"title": "Bootstrap Package",
