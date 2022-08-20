@@ -18,7 +18,7 @@ The following base packages are currently available:
 | [Fluid Styled Content](https://get.typo3.dev/wizards/sitepackage/new/typo3/base-package-fluid-styled-content) | For a Sitepackage based on the Fluid Styled Content Extension | ✅ | ✅ |
 | [Introduction Package](https://get.typo3.dev/wizards/sitepackage/new/typo3/base-package-introduction-package) | For a Sitepackage based on the Official TYPO3 Introduction Package | ✅ | ❌ |
 
-### Rules to add a new base package
+### Rules to submit a new Base Package
 
 In order for a pull request from a new base package to be accepted, it must meet
 some conditions. A base package:
@@ -51,32 +51,12 @@ TYPO3 Sitepackage Builder Base Packages are Composer packages of type
 extra section is used to additionally describe the base package e.g. with the
 supported TYPO3 core versions.
 
-The following example shows the directory structure of some base packages:
+To [create a new Base Package](https://github.com/GsTYPO3/base-package-skeleton/generate)
+use the template repository.
+
+The following example shows the directory structure of a base package:
 
 ```text
-    typo3/
-        bootstrap-package/
-            public/
-                images/
-                    preview.png
-                templates/
-                    skeletons/
-                        8.7/
-                        9.5/
-                        10.4/
-                        11.5/
-            composer.json
-        fluid-styled-content/
-            public/
-                images/
-                    preview.png
-                templates/
-                    skeletons/
-                        8.7/
-                        9.5/
-                        10.4/
-                        11.5/
-            composer.json
     vendor/
         base-package/
             public/
@@ -84,17 +64,17 @@ The following example shows the directory structure of some base packages:
                     preview.png
                 templates/
                     skeletons/
+                        10.4/
                         11.5/
+                        share/
             composer.json
 ```
 
 ### The Manifest (`composer.json`)
 
-The `composer.json` contains the edge information about the base package and
-must be of type `typo3-base-package`.
+The `composer.json` contains the edge information about the Base Package.
 
-An example `composer.json` can be found in the [template](.template/composer.json).
-Here is a description of the various keys in `extra.typo3/base-package`.
+Here is a description of the known keys in `extra.typo3/base-package`.
 
 #### The `title` property
 
