@@ -1,0 +1,45 @@
+name: 🚀 Submit a Base Package
+description: Submit a new Base Package to get integrated into the Sitepackage Builder.
+labels: [base-package-submission]
+assignees:
+  - gilbertsoft
+body:
+  - type: checkboxes
+    id: coc
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow the [TYPO3 Code of Conduct](https://typo3.org/coc).
+      options:
+        - label: I agree to follow the TYPO3 Code of Conduct
+          required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Does your Base Package meet the rules for submission?
+      description: Please read the rules for submission and verify that your base package meets them properly.
+      options:
+        - label: Yes, my Base Package meets the rules for submission
+          required: true
+  - type: input
+    id: package-name
+    attributes:
+      label: Composer Package Name
+      description: What is the Composer package name of your Base Package?
+      placeholder: 'Example: my-vendor/my-base-package'
+    validations:
+      required: true
+  - type: checkboxes
+    id: listing-application
+    attributes:
+      label: Would you like to apply for the listing at get.typo3.org?
+      description: The listing at get.typo3.org is optional and the Base Package has to meet some additional requirements and can also be declined.
+      options:
+        - label: Yes, I like to apply for the listing at get.typo3.org
+          required: false
+  - type: textarea
+    id: application-reasons
+    attributes:
+      label: Reasons for the application for the listing at get.typo3.org
+      description: If you applied for the listing at get.typo3.org above, please describe why you think your Base Package should get listed and what's the added value for the community. This will help us to process your application.
+    validations:
+      required: false

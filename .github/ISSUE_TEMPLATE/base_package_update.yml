@@ -1,0 +1,14 @@
+name: 🚀 Update a Base Package
+description: Update an existing Base Package that has been previously submitted.
+labels: [base-package-submission]
+assignees:
+  - gilbertsoft
+body:
+  - type: input
+    id: package-name
+    attributes:
+      label: Composer Package Name
+      description: What is the Composer package name of the Base Package to update?
+      placeholder: 'Example: my-vendor/my-base-package'
+    validations:
+      required: true
