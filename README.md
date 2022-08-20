@@ -13,10 +13,10 @@ The following base packages are currently available:
 
 | Package | Description | Listed | Official |
 | --- | --- | :---: | :---: |
-| [Bootstrap Package](https://get.typo3.dev/wizards/sitepackage/validate/typo3/base-package-bootstrap-package) | For a Sitepackage based on the popular Bootstrap Package | ✅ | ✅ |
-| [Community Test Package](https://get.typo3.dev/wizards/sitepackage/validate/typo3/base-package-community-test) | For a Sitepackage based on the Community Test Package | ❌ | ❌ |
-| [Fluid Styled Content](https://get.typo3.dev/wizards/sitepackage/validate/typo3/base-package-fluid-styled-content) | For a Sitepackage based on the Fluid Styled Content Extension | ✅ | ✅ |
-| [Introduction Package](https://get.typo3.dev/wizards/sitepackage/validate/typo3/base-package-introduction-package) | For a Sitepackage based on the Official TYPO3 Introduction Package | ✅ | ❌ |
+| [Bootstrap Package](https://get.typo3.dev/wizards/sitepackage/new/typo3/base-package-bootstrap-package) | For a Sitepackage based on the popular Bootstrap Package | ✅ | ✅ |
+| [Community Test Package](https://get.typo3.dev/wizards/sitepackage/new/typo3/base-package-community-test) | For a Sitepackage based on the Community Test Package | ❌ | ❌ |
+| [Fluid Styled Content](https://get.typo3.dev/wizards/sitepackage/new/typo3/base-package-fluid-styled-content) | For a Sitepackage based on the Fluid Styled Content Extension | ✅ | ✅ |
+| [Introduction Package](https://get.typo3.dev/wizards/sitepackage/new/typo3/base-package-introduction-package) | For a Sitepackage based on the Official TYPO3 Introduction Package | ✅ | ❌ |
 
 ### Rules to add a new base package
 
