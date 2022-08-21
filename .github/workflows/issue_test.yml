@@ -1,0 +1,99 @@
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  issue_test:
+    name: Issue Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Examine labels
+        if: contains(fromJson('["base-package-submission", "base-package-update"]'), github.event.label.name)
+        run: echo "::debug::Found valid label ${{ github.event.label.name }}"
+
+      - name: Print issue
+        env:
+          ISSUE: ${{ toJSON(github.event.issue) }}
+        run: |
+          echo "$ISSUE"
+
+      - name: Print event
+        env:
+          EVENT: ${{ toJSON(github.event) }}
+        run: |
+          echo "$EVENT"
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          coverage: none
+          extensions: intl, zip
+          ini-values: memory_limit=-1
+          php-version: latest
+          tools: composer
+
+      - name: Update Base Package
+        id: package
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const body = new String(context.payload.issue.body)
+            core.debug(`Body: ${body}`)
+            const re = new RegExp(/Composer Package Name\s+(\S+)\s/, 'gm')
+            const matches = re.exec(body)
+            core.debug(matches)
+            const packageName = matches[1]
+            core.debug(`Package name: ${packageName}`)
+
+            if (packageName == undefined || packageName == '') {
+              core.setFailed('Package name not found.')
+              return
+            }
+
+            core.setOutput('package_name', packageName)
+
+            const fs = require('fs')
+            const exists = (stat = fs.statSync(packageName, {throwIfNoEntry: false})) !== undefined ? stat.isDirectory() : false
+
+            const exitCode = await exec.exec(`composer require -d.build ${packageName}:@dev`, [], {ignoreReturnCode: true})
+
+            if (exitCode !== 0) {
+              core.setFailed(`Error downloading base package.`)
+              return
+            }
+
+      - name: Add change commit
+        run: |
+          git config user.name ${{ github.event.sender.login }}
+          git config user.email ${{ github.event.sender.id }}+${{ github.event.sender.login }}@users.noreply.github.com
+          git branch task/${{ steps.package.outputs.package_name }}
+          git switch task/${{ steps.package.outputs.package_name }}
+          git add .
+          git commit -m "[TASK] Update ${{ steps.package.outputs.package_name }}"
+          git push -f origin task/${{ steps.package.outputs.package_name }}
+
+      - name: Update Base Package
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const response = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: "[TASK] Update ${{ steps.package.outputs.package_name }}",
+              head: "task/${{ steps.package.outputs.package_name }}",
+              base: "main",
+              body: `Solves #${context.payload.issue.number}`,
+              maintainer_can_modify: true,
+              draft: false,
+            })
+
+            core.debug(response)
+
+            if (response.status !== 201) {
+              throw new Error(`Create pull request failed (${response.status}).`)
+            }
+
+            core.notice(`Pull request ${response.data.number} created.`)
