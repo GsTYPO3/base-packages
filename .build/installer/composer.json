@@ -1,0 +1,28 @@
+{
+    "name": "typo3/base-package-installer-plugin",
+    "license": "GPL-2.0-or-later",
+    "type": "composer-plugin",
+    "require": {
+        "composer-plugin-api": "^1.0 || ^2.0"
+    },
+    "require-dev": {
+        "composer/composer": "^1.3 || ^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TYPO3\\Composer\\": "src"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "typo3/base-package-installer-plugin": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        },
+        "class": "TYPO3\\Composer\\BasePackageInstallerPlugin"
+    }
+}
