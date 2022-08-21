@@ -1,0 +1,39 @@
+{
+	"name": "gilbertsoft/base-package-test",
+	"description": "TYPO3 Base Package for the generation of a TYPO3 Sitepackage for testing purposes.",
+	"license": "GPL-2.0-or-later",
+	"type": "typo3-base-package",
+	"authors": [
+		{
+			"name": "Simon Gilli",
+			"email": "simon.gilli@typo3.org",
+			"homepage": "https://typo3.org",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/gilbertsoft/base-package-test/issues",
+		"chat": "https://typo3.org/help",
+		"source": "https://github.com/gilbertsoft/base-package-test",
+		"docs": "https://docs.typo3.org"
+	},
+	"require-dev": {
+		"ergebnis/composer-normalize": "^2.28",
+		"typo3/coding-standards": "^0.5"
+	},
+	"config": {
+		"allow-plugins": {
+			"ergebnis/composer-normalize": true
+		}
+	},
+	"extra": {
+		"typo3/base-package": {
+			"core-versions": [
+				"10.4",
+				"11.5"
+			],
+			"description": "Used for testing purposes only.",
+			"title": "Testing Base Package"
+		}
+	}
+}
