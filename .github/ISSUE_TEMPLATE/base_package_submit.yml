@@ -1,7 +1,7 @@
 name: 🆕 Submit a Base Package
 description: Submit a new Base Package for the usage with the TYPO3 Sitepackage Builder.
-title: "Submit a new Base Package"
-labels: [base-package-submission]
+title: "Submit Base Package <replace_by_package_name>"
+labels: [base-package-submit]
 assignees:
   - gilbertsoft
 body:
