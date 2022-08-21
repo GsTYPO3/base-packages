@@ -1,0 +1,24 @@
+{
+    "name": "{{ package.composerName }}",
+    "type": "typo3-cms-extension",
+    "description": "{{ package.description}}",
+    "homepage": "{{ package.author.homepage }}",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "typo3/cms-core": "^10.4"
+    },
+    "require-dev": {
+        "typo3/coding-standards": "^0.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "{{ package.psr4Namespace }}\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "{{ package.extensionKey }}"
+        }
+    }
+}
