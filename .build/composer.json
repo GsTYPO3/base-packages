@@ -3,6 +3,7 @@
     "license": "GPL-2.0-or-later",
     "type": "project",
     "require": {
+        "gilbertsoft/base-package-test": "@dev",
         "typo3/base-package-installer-plugin": "^0.1@dev"
     },
     "require-dev": {
